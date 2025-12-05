@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Abhinav! 🥰</title>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Montserrat:wght@400;700&display=swap');
+
+    /* Minimalist muted color theme */
+    body {
+        margin: 0;
+        padding: 0;
+        background: #121212; /* black */
+        color: #f5f5f5; /* off-white */
+        font-family: 'Montserrat', sans-serif;
+        overflow-x: hidden;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: auto;
+        padding: 50px 20px;
+        text-align: center;
+    }
+
+    h1 {
+        font-family: 'Luckiest Guy', cursive;
+        font-size: 3em;
+        color: #9b8cfc; /* muted purple */
+        margin-bottom: 25px;
+        text-shadow: 0 0 5px #f4a6c1; /* muted pink glow */
+        animation: pulse 2.5s infinite alternate;
+    }
+
+    @keyframes pulse {
+        0% { opacity: 0.8; }
+        50% { opacity: 1; }
+        100% { opacity: 0.8; }
+    }
+
+    .note {
+        background: #1e1e1e; /* dark muted gray */
+        border: 2px solid #9b8cfc; /* muted purple border */
+        border-radius: 15px;
+        padding: 25px;
+        margin: 20px 0;
+        text-align: left;
+        line-height: 1.6;
+        font-size: 1.1em;
+        color: #f5f5f5;
+    }
+
+    .note p {
+        margin: 12px 0;
+    }
+
+    .highlight {
+        color: #f4a6c1; /* muted pink */
+        font-weight: 600;
+    }
+
+    ul {
+        list-style-type: disc;
+        padding-left: 20px;
+        margin-top: 10px;
+    }
+
+    li {
+        margin: 6px 0;
+    }
+
+    .gift-note {
+        text-align: center;
+        background: #1e1e1e; /* muted gray */
+        border: 2px solid #f4a6c1; /* muted pink border */
+        border-radius: 15px;
+        padding: 20px;
+        margin-top: 30px;
+    }
+
+    button {
+        margin-top: 15px;
+        padding: 12px 28px;
+        font-size: 1.1em;
+        background: #9b8cfc; /* muted purple */
+        color: #121212; /* black text */
+        border: 2px solid #f4a6c1;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-weight: bold;
+    }
+
+    button:hover {
+        transform: scale(1.05);
+        background: #b5aafc; /* slightly lighter muted purple */
+    }
+
+    .footer {
+        margin-top: 50px;
+        font-size: 0.95em;
+        color: #b0b0b0; /* muted gray text */
+    }
+
+    /* Subtle confetti */
+    .confetti {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 9999;
+    }
+
+    .confetti-piece {
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        opacity: 0.7;
+        border-radius: 2px;
+        animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+        0% { transform: translateY(-10px) rotate(0deg); }
+        100% { transform: translateY(100vh) rotate(360deg); }
+    }
+</style>
+</head>
+<body>
+
+<div class="confetti" id="confetti"></div>
+
+<div class="container">
+    <h1>🥰 Happy Birthday Abhinav! 🥰</h1>
+
+    <div class="note">
+        <p>Hey baby, happy birthday 🥹✨. This year, not only did some legendary things turn 15, but also my heart keeps turning for you every day 💜. You’re officially part of my “all-time favorite humans” list, right up there with memes, pizza, and sunsets 🌅.The following things also turned 15:</p>
+        <ul>
+            <li><span class="highlight">Instagram</span> – we may scroll together for hours 📸</li>
+            <li><span class="highlight">iPad (first gen)</span> – basically the start of our digital chaos 🍎</li>
+            <li><span class="highlight">Inception</span> – dreams within dreams, kinda like us 💭</li>
+            <li><span class="highlight">Tangled</span> – but you’re my real-life Rapunzel 🏮</li>
+            <li><span class="highlight">How To Train Your Dragon</span> – and I’d still choose you over a dragon 🐉</li>
+            <li><span class="highlight">"Love The Way You Lie"</span> – okay, we’re the sweet remix version 🎶</li>
+        </ul>
+        <p>Basically, Abhinav, you’re a legend, a vibe, and the absolute best part of my every day 🥰. Can’t wait to make more memories with you—starting with today! 💖</p>
+    </div>
+
+    <div class="gift-note">
+        <p>Alr, now that the love note is out, let’s move to the main gift! 🎁<br>
+        Solve a simple puzzle to unlock your surprise 🎉</p>
+        <a href="https://dionysus887.github.io/OSINT-birthday-puzzle/" target="_blank">
+            <button>Are you ready?</button>
+        </a>
+    </div>
+
+    <div class="footer">
+        💜 Made with muted minimalist love
+    </div>
+</div>
+
+<script>
+// Subtle confetti generator in muted tones
+const confettiContainer = document.getElementById('confetti');
+
+function createConfetti() {
+    const confetti = document.createElement('div');
+    confetti.classList.add('confetti-piece');
+    confetti.style.left = Math.random() * window.innerWidth + 'px';
+    confetti.style.backgroundColor = `hsl(${Math.random() * 30 + 270}, 50%, 70%)`; // muted purple-pink
+    confetti.style.animationDuration = 3 + Math.random() * 3 + 's';
+    confettiContainer.appendChild(confetti);
+
+    setTimeout(() => confetti.remove(), 6000);
+}
+
+setInterval(createConfetti, 150);
+</script>
+
+</body>
+</html>
+
+
+
+
